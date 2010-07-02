@@ -1,0 +1,22 @@
+<h1>Listing workperiods</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+  </tr>
+
+<% for workperiod in @workperiods %>
+  <tr>
+    <td><%=h workperiod.start %></td>
+    <td><%=h workperiod.end %></td>
+    <td><%= link_to 'Show', workperiod %></td>
+    <td><%= link_to 'Edit', edit_workperiod_path(workperiod) %></td>
+    <td><%= link_to 'Destroy', workperiod, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New workperiod', new_workperiod_path %>
