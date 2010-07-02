@@ -1,0 +1,22 @@
+<h1>Listing project_tasks</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Project</th>
+  </tr>
+
+<% for project_task in @project_tasks %>
+  <tr>
+    <td><%=h project_task.description %></td>
+    <td><%=h project_task.project_id %></td>
+    <td><%= link_to 'Show', project_task %></td>
+    <td><%= link_to 'Edit', edit_project_task_path(project_task) %></td>
+    <td><%= link_to 'Destroy', project_task, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New project_task', new_project_task_path %>

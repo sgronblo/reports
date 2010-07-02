@@ -1,0 +1,13 @@
+<p>
+  <b>Description:</b>
+  <%=h @project_task.description %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%=h @project_task.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_task_path(@project_task) %> |
+<%= link_to 'Back', project_tasks_path %>
